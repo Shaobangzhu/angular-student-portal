@@ -5,7 +5,6 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ReceiverComponent } from './components/receiver/receiver.component';
 import { SenderComponent } from './components/sender/sender.component';
-import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'students', pathMatch: 'full' },
@@ -23,9 +22,3 @@ export const routes: Routes = [
 
   { path: '**', redirectTo: 'students' },
 ];
-
-@NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule],
-})
-export class AppRoutingModule {}
