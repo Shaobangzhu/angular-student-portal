@@ -1,0 +1,10 @@
+<h2>Student Detail</h2>
+
+<div *ngif="loading">Loading...</div>
+<div *ngif="error">{{ error }}</div>
+
+<div *ngif="!loading && !error && student">
+    <p>ID: {{ student.id }}</p>
+    <p>Name: {{ student.name }} </p>
+    <p>Email: {{ student.email }}</p>
+</div>
