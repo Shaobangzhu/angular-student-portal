@@ -1,8 +1,12 @@
 import { Component } from "@angular/core";
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from "@angular/common";
 import { MessageService } from "../../services/message.service";
 
 @Component({
+    standalone: true,
     selector: 'app-sender',
+    imports: [CommonModule, FormsModule],
     template: `
         <h3>Sender</h3>
         <input [ngModel]="text" />

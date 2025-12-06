@@ -9,4 +9,14 @@
         [student]="s"
         (select)="onSelectStudent($event)"
     ></app-student-item>
+
+    <hr />
+
+    <ul>
+        <li *ngFor="let s of students">
+            <a [routerLink]="['/students', s.id]">
+                View detail for {{ s.name }}
+            </a>
+        </li>
+    </ul>
 </div>

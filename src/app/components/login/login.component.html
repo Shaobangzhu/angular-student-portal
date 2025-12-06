@@ -6,7 +6,7 @@
         <input formControlName="email" type="email" />
     </label>
     <div
-        *ngif="emailCtrl?.invalid && emailCtrl?.touched"
+        *ngIf="emailCtrl?.invalid && emailCtrl?.touched"
         class="error"
     >
         Invalid email.
@@ -17,7 +17,7 @@
         <input formControlName="password" type="password" />
     </label>
     <div
-        *ngif="passwordCtrl?.invalid && passwordCtrl?.touched"
+        *ngIf="passwordCtrl?.invalid && passwordCtrl?.touched"
         class="error"
     >
         Password must be at least 6 characters.

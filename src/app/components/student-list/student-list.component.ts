@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { Student } from '../../models/student';
 import { StudentService } from '../../services/student.service';
 import { StudentItemComponent } from '../student-item/student-item.component';
@@ -7,7 +8,7 @@ import { StudentItemComponent } from '../student-item/student-item.component';
 @Component({
     standalone: true,
     selector: 'app-student-list',
-    imports: [CommonModule, StudentItemComponent],
+    imports: [CommonModule, RouterLink, StudentItemComponent],
     templateUrl: './student-list.component.html',
 })
 export class StudentListComponent implements OnInit {
