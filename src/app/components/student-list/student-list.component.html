@@ -1,9 +1,9 @@
 <h2>Students</h2>
 
-<div *ngif="loading">Loading...</div>
-<div *ngif="error">{{ error }}</div>
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
 
-<div *ngif="!loading && !error">
+<div *ngIf="!loading && !error">
     <app-student-item
         *ngFor="let s of students"
         [student]="s"

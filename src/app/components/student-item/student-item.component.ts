@@ -1,8 +1,11 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { Student } from '../../models/student';
 
 @Component({
+    standalone: true,
     selector: 'app-student-item',
+    imports: [CommonModule],
     template: `
         <div class="student-item">
             <span>{{ student.name }} ({{ student.email || 'N/A' }})</span>

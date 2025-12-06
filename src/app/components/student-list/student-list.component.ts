@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { Student } from '../../models/student';
 import { StudentService } from '../../services/student.service';
+import { StudentItemComponent } from '../student-item/student-item.component';
 
 @Component({
+    standalone: true,
     selector: 'app-student-list',
+    imports: [CommonModule, StudentItemComponent],
     templateUrl: './student-list.component.html',
 })
 export class StudentListComponent implements OnInit {
@@ -14,7 +17,6 @@ export class StudentListComponent implements OnInit {
 
     constructor(
         private readonly studentService: StudentService,
-        private readonly router: Router,
     ){}
 
     ngOnInit(): void {
@@ -39,7 +41,7 @@ export class StudentListComponent implements OnInit {
     }
 
     onSelectStudent(id: number): void {
-        // Demo: 选中后跳转至详情页
-        this.router.navigate(['/students', id]);
+        // 这里可以只console.log, 或者在模板中用routerLink
+        console.log('Selected student id: ', id);
     }
 }

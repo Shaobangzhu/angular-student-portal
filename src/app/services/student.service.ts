@@ -9,7 +9,7 @@ import { Student } from '../models/student';
 })
 export class StudentService {
     // 把 baseUrl 抽出来, 方便以后改 / 配合环境变量
-    private readonly baseUrl = '/api/students';
+    private readonly baseUrl = 'http://localhost:3000/api/students';
 
     constructor(private http: HttpClient) {}
 
